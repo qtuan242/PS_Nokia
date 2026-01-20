@@ -8,11 +8,13 @@ It is also possible to collect most of the troubleshooting data described in thi
 Table: Commands for collecting CMG-a8 platform logs
 Data	Command	Additional Information
 ###AIM information1
+
 —	snmpget -v 2c -c AirFrameR 10.10.0.1 sysDescr.0	—
 snmpget -v 2c -c AirFrameW 10.10.0.1 sysDescr.0	—
 /etc/snmp/	Collect/display all logs in the directory
 /var/log/aimmonitor.log	—
 ###Infrastructure information
+
 —	cmg status	Display the status of the CMG VMs and system parameters
 cmg health-status1	Display the status of the CMG-a server
 ls -al /DELIV/2	—
@@ -20,6 +22,7 @@ ls -al /BACKUP/	—
 ls -al /CMGax/	Where x is 2 or 8 for CMG-a2 or CMG-a8 respectively
 df -al	—
 ###Infrastructure system logs
+
 —	/var/log/cmg_rollback.log	—
 /var/log/cmg-system-monitor.log-*	—
 /var/log/cmg_update.log	—
@@ -29,6 +32,7 @@ df -al	—
 /var/log/monitorLink*	Applicable only to CMG-a2
 /var/log/yum.log2	—
 /var/log/yum_update.log	—
+
 ###Airframe HW status logs
 —	ipmitool sel info2	—
 ipmitool sensor list2	—
